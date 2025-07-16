@@ -1,98 +1,142 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Help Lasse met zijn reiskosten voor waterpolo</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #e0f7fa;
-            color: #004d40;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
-        }
-        header {
-            background-color: #00796b;
-            color: white;
-            padding: 20px;
-            width: 100%;
-            text-align: center;
-        }
-        main {
-            max-width: 700px;
-            margin: 40px 20px;
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.15);
-            text-align: center;
-        }
-        h1 {
-            margin-top: 0;
-        }
-        p {
-            font-size: 1.1rem;
-            margin-bottom: 20px;
-            line-height: 1.6;
-        }
-        .donate-button {
-            background-color: #00796b;
-            color: white;
-            font-size: 1.2rem;
-            padding: 15px 30px;
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-            margin-top: 30px;
-        }
-        .donate-button:hover {
-            background-color: #004d40;
-        }
-        .note {
-            font-size: 0.9rem;
-            color: #555;
-            margin-top: 20px;
-        }
-        footer {
-            margin-top: auto;
-            padding: 15px;
-            background-color: #004d40;
-            color: white;
-            width: 100%;
-            text-align: center;
-            font-size: 0.9rem;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Help Lasse met waterpolo reizen</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #e0f7fa;
+      color: #004d40;
+    }
+
+    header {
+      background: #00796b;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      transform: skewY(-2deg);
+    }
+    header h1 {
+      margin: 0;
+      transform: skewY(2deg);
+    }
+
+    .section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .section:nth-child(even) {
+      background-color: #ffffff;
+    }
+
+    .section:nth-child(odd) {
+      background-color: #b2dfdb;
+    }
+
+    .section h2 {
+      margin-top: 0;
+      color: #004d40;
+    }
+
+    .ball {
+      width: 100px;
+      height: 100px;
+      background-color: #00796b;
+      border-radius: 50%;
+      position: absolute;
+      z-index: -1;
+      opacity: 0.1;
+    }
+
+    .ball1 { top: 50px; left: 30px; }
+    .ball2 { top: 600px; right: 20px; }
+    .ball3 { top: 1200px; left: 50%; transform: translateX(-50%); }
+
+    .donate {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .donate-button {
+      background-color: #00796b;
+      color: white;
+      font-size: 1.2rem;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .donate-button:hover {
+      background-color: #004d40;
+    }
+
+    .note {
+      font-size: 0.9rem;
+      color: #333;
+      margin-top: 15px;
+    }
+
+    footer {
+      background-color: #004d40;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Help mij mijn waterpolodroom waarmaken</h1>
-    </header>
 
-    <main>
-        <p>Hoi! Ik ben <strong>Lasse</strong>, ik ben 14 jaar oud en ik speel al sinds mijn 6e fanatiek waterpolo.</p>
-        <p>Ik train meer dan 7 keer per week en speel op het hoogste niveau: de Eredivisie, bij <strong>Het Ravijn</strong> in Nijverdal. Waterpolo is echt mijn passie en ik geef er alles voor!</p>
-        <p>Naast alle trainingen en wedstrijden moet ik elke dag reizen van <strong>Doetinchem</strong> naar <strong>Ede</strong> en daarna weer terug naar huis. Dit kost veel tijd én geld.</p>
-        <p>Daarom vraag ik om jouw hulp. Wil jij mij steunen met een donatie om mijn reiskosten te helpen betalen?</p>
-        <p>Elke bijdrage, hoe klein ook, helpt mij enorm om mijn droom te blijven volgen!</p>
+  <div class="ball ball1"></div>
+  <div class="ball ball2"></div>
+  <div class="ball ball3"></div>
 
-        <a href="https://www.paypal.com/donate?hosted_button_id=JOUW_PAYPAL_ID" class="donate-button" target="_blank" rel="noopener noreferrer">
-            Doneer nu
-        </a>
+  <header>
+    <h1>Help mij mijn waterpolodroom waarmaken</h1>
+  </header>
 
-        <p class="note">Ben je jonger dan 18? Vraag dan eerst toestemming aan je ouders of voogd voordat je doneert.</p>
-    </main>
+  <section class="section">
+    <h2>Over mij</h2>
+    <p>Hoi! Ik ben <strong>Lasse</strong>, 14 jaar oud en al 8 jaar fanatiek bezig met waterpolo. Ik train meer dan 7 keer per week en speel op het hoogste niveau: de Eredivisie, bij <strong>Het Ravijn</strong> in Nijverdal.</p>
+  </section>
 
-    <footer>
-        &copy; 2025 Lasse | Waterpolo Het Ravijn Nijverdal
-    </footer>
+  <section class="section">
+    <h2>Mijn route en reizen</h2>
+    <p>Naast trainingen en wedstrijden moet ik dagelijks reizen van <strong>Doetinchem</strong> naar <strong>Ede</strong>, en dan weer naar huis. Deze lange routes kosten veel tijd én geld.</p>
+  </section>
+
+  <section class="section">
+    <h2>Waarom ik jouw steun nodig heb</h2>
+    <p>Mijn passie voor waterpolo vraagt veel inzet en reistijd. Daarom vraag ik hulp om mijn reiskosten te dekken. Met jouw steun kan ik blijven trainen, reizen en mijn droom najagen in de top van het Nederlandse waterpolo.</p>
+  </section>
+
+  <section class="section">
+    <h2>Steun mij</h2>
+    <p>Elke bijdrage helpt! Wil jij me helpen mijn sport te blijven doen?</p>
+
+    <div class="donate">
+      <a href="https://www.paypal.com/donate?hosted_button_id=JOUW_PAYPAL_ID" class="donate-button" target="_blank" rel="noopener noreferrer">
+        Doneer nu
+      </a>
+      <p class="note">Ben je jonger dan 18? Vraag dan eerst toestemming aan je ouders of voogd.</p>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Lasse | Waterpolo Het Ravijn Nijverdal
+  </footer>
+
 </body>
 </html>
