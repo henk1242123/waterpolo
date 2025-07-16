@@ -104,30 +104,66 @@
       margin-top: 40px;
     }
 
-    /* Layout voor blokje linksboven */
-    .knzb-block {
+    /* ⬅️ KNZB vakje linksboven */
+    .knzb-box {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      width: 300px;
       background-color: #ffffff;
-      padding: 30px;
       border-left: 5px solid #00796b;
-      transform: rotate(-1.5deg);
+      padding: 15px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      max-width: 1000px;
-      margin: auto;
-      margin-top: 40px;
+      transform: rotate(-2deg);
+      z-index: 999;
     }
 
-    .knzb-block h2 {
+    .knzb-box h3 {
       margin-top: 0;
+      font-size: 1.1rem;
+      transform: rotate(2deg);
     }
 
+    .knzb-box a {
+      color: #00796b;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .knzb-box a:hover {
+      text-decoration: underline;
+    }
+
+    @media screen and (max-width: 768px) {
+      .knzb-box {
+        position: static;
+        width: auto;
+        transform: none;
+        margin: 20px;
+      }
+      .knzb-box h3 {
+        transform: none;
+      }
+    }
   </style>
 </head>
 <body>
 
+  <!-- 🎯 Links boven het KNZB blok -->
+  <div class="knzb-box">
+    <h3>📅 KNZB Programma</h3>
+    <p>
+      Bekijk live het programma, uitslagen & stand van mijn team:
+    </p>
+    <a href="https://waterpolo.knzb.nl/waterpolo/teams/team/8294" target="_blank">→ Naar KNZB-teamoverzicht</a>
+  </div>
+
+  <!-- ⚪ Achtergrondballen -->
   <div class="ball ball1"></div>
   <div class="ball ball2"></div>
   <div class="ball ball3"></div>
 
+  <!-- 🏊 Header -->
   <header>
     <h1>Help mij mijn waterpolodroom waarmaken</h1>
   </header>
@@ -157,19 +193,6 @@
       </a>
       <p class="note">Ben je jonger dan 18? Vraag dan eerst toestemming aan je ouders of voogd.</p>
     </div>
-  </section>
-
-  <!-- KNZB live programma blok -->
-  <section class="knzb-block">
-    <h2>Programma, uitslagen & stand (live)</h2>
-    <p>Hieronder zie je het actuele overzicht van mijn team via de officiële KNZB-website:</p>
-    <iframe src="https://waterpolo.knzb.nl/waterpolo/teams/team/8294">
-      Je browser ondersteunt deze weergave niet.
-    </iframe>
-    <p class="note">
-      Werkt het niet goed op je mobiel? <br />
-      <a href="https://waterpolo.knzb.nl/waterpolo/teams/team/8294" target="_blank">Klik hier om de pagina apart te openen</a>.
-    </p>
   </section>
 
   <footer>
