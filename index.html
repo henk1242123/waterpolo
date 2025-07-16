@@ -22,6 +22,7 @@
       text-align: center;
       transform: skewY(-2deg);
     }
+
     header h1 {
       margin: 0;
       transform: skewY(2deg);
@@ -46,20 +47,6 @@
       margin-top: 0;
       color: #004d40;
     }
-
-    .ball {
-      width: 100px;
-      height: 100px;
-      background-color: #00796b;
-      border-radius: 50%;
-      position: absolute;
-      z-index: -1;
-      opacity: 0.1;
-    }
-
-    .ball1 { top: 50px; left: 30px; }
-    .ball2 { top: 600px; right: 20px; }
-    .ball3 { top: 1200px; left: 50%; transform: translateX(-50%); }
 
     .donate {
       text-align: center;
@@ -89,13 +76,6 @@
       margin-top: 15px;
     }
 
-    iframe {
-      width: 100%;
-      height: 900px;
-      border: none;
-      margin-top: 20px;
-    }
-
     footer {
       background-color: #004d40;
       color: white;
@@ -104,66 +84,65 @@
       margin-top: 40px;
     }
 
-    /* ⬅️ KNZB vakje linksboven */
-    .knzb-box {
+    /* ⚽️ Ballen achtergrond */
+    .ball {
+      width: 100px;
+      height: 100px;
+      background-color: #00796b;
+      border-radius: 50%;
+      position: absolute;
+      z-index: -1;
+      opacity: 0.1;
+    }
+
+    .ball1 { top: 50px; left: 30px; }
+    .ball2 { top: 600px; right: 20px; }
+    .ball3 { top: 1200px; left: 50%; transform: translateX(-50%); }
+
+    /* 📅 KNZB blok linksboven */
+    .knzb-iframe {
       position: absolute;
       top: 20px;
       left: 20px;
-      width: 300px;
-      background-color: #ffffff;
-      border-left: 5px solid #00796b;
-      padding: 15px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 350px;
+      height: 300px;
+      border: 3px solid #00796b;
       transform: rotate(-2deg);
-      z-index: 999;
+      z-index: 1000;
+      background-color: white;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      overflow: hidden;
     }
 
-    .knzb-box h3 {
-      margin-top: 0;
-      font-size: 1.1rem;
-      transform: rotate(2deg);
-    }
-
-    .knzb-box a {
-      color: #00796b;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .knzb-box a:hover {
-      text-decoration: underline;
+    .knzb-iframe iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
     }
 
     @media screen and (max-width: 768px) {
-      .knzb-box {
+      .knzb-iframe {
         position: static;
-        width: auto;
         transform: none;
-        margin: 20px;
-      }
-      .knzb-box h3 {
-        transform: none;
+        width: 100%;
+        height: 400px;
+        margin-bottom: 20px;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- 🎯 Links boven het KNZB blok -->
-  <div class="knzb-box">
-    <h3>📅 KNZB Programma</h3>
-    <p>
-      Bekijk live het programma, uitslagen & stand van mijn team:
-    </p>
-    <a href="https://waterpolo.knzb.nl/waterpolo/teams/team/8294" target="_blank">→ Naar KNZB-teamoverzicht</a>
+  <!-- 📅 KNZB programma live linksboven -->
+  <div class="knzb-iframe">
+    <iframe src="https://waterpolo.knzb.nl/waterpolo/teams/team/8294"></iframe>
   </div>
 
-  <!-- ⚪ Achtergrondballen -->
+  <!-- ⚪️ Ballen -->
   <div class="ball ball1"></div>
   <div class="ball ball2"></div>
   <div class="ball ball3"></div>
 
-  <!-- 🏊 Header -->
   <header>
     <h1>Help mij mijn waterpolodroom waarmaken</h1>
   </header>
