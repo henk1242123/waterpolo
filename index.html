@@ -3,180 +3,118 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Help Lasse met waterpolo reizen</title>
+  <title>Lasse's Waterpolo & Donaties</title>
   <style>
-    /* --- bestaande styles --- */
-
-    * {
-      box-sizing: border-box;
-    }
     body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: #e0f7fa;
+      margin: 0;
+      padding: 20px;
       color: #004d40;
     }
-
     header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+      color: #00796b;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .block {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 20px;
+      flex: 1 1 300px;
+      position: relative;
+      overflow: hidden;
+    }
+    /* Schuine tekst linksboven */
+    .block::before {
+      content: attr(data-label);
+      position: absolute;
+      top: 10px;
+      left: -40px;
       background: #00796b;
       color: white;
-      padding: 20px 20px;
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      transform: skewY(-2deg);
+      padding: 5px 50px;
+      font-weight: bold;
+      font-size: 0.9rem;
+      transform: rotate(-45deg);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      user-select: none;
     }
-
-    header h1 {
-      margin: 0;
-      transform: skewY(2deg);
-      font-size: 1.8rem;
-      flex-grow: 1;
-    }
-
-    /* Logo container */
-    .logo {
-      width: 60px;
-      height: 60px;
-      transform: skewY(2deg);
-      flex-shrink: 0;
-    }
-
-    /* De rest van je styles hier... */
-
-    .section {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
-      margin-bottom: 20px;
-    }
-
-    .section:nth-child(even) {
-      background-color: #ffffff;
-    }
-
-    .section:nth-child(odd) {
-      background-color: #b2dfdb;
-    }
-
-    .section h2 {
+    h2 {
       margin-top: 0;
       color: #004d40;
     }
-
-    .donate {
-      text-align: center;
-      margin-top: 30px;
+    p {
+      line-height: 1.5;
     }
-
-    .donate-button {
+    /* Knoppen */
+    .btn {
+      display: inline-block;
       background-color: #00796b;
       color: white;
-      font-size: 1.2rem;
       padding: 15px 30px;
-      border: none;
       border-radius: 50px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
       text-decoration: none;
-      display: inline-block;
-      margin: 10px 5px 0 5px;
-    }
-
-    .donate-button:hover {
-      background-color: #004d40;
-    }
-
-    .note {
-      font-size: 0.9rem;
-      color: #333;
+      font-size: 1.2rem;
+      font-weight: 700;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
       margin-top: 15px;
     }
-
-    footer {
+    .btn:hover {
       background-color: #004d40;
-      color: white;
+    }
+    footer {
       text-align: center;
-      padding: 20px;
-      margin-top: 40px;
+      margin-top: 50px;
+      font-size: 0.9rem;
+      color: #00796b;
     }
-
-    /* ⚪️ Ballen achtergrond */
-    .ball {
-      width: 100px;
-      height: 100px;
-      background-color: #00796b;
-      border-radius: 50%;
-      position: absolute;
-      z-index: -1;
-      opacity: 0.1;
-    }
-
-    .ball1 { top: 50px; left: 30px; }
-    .ball2 { top: 600px; right: 20px; }
-    .ball3 { top: 1200px; left: 50%; transform: translateX(-50%); }
   </style>
 </head>
 <body>
-
-  <!-- ⚪️ Ballen -->
-  <div class="ball ball1"></div>
-  <div class="ball ball2"></div>
-  <div class="ball ball3"></div>
-
   <header>
-    <div class="logo" aria-label="Waterpolo keeper logo">
-      <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-        <!-- Hoofd -->
-        <circle cx="32" cy="20" r="8" fill="#004d40" />
-        <!-- Lichaam -->
-        <path d="M20 40 Q32 50 44 40" stroke="#004d40" fill="#00796b" />
-        <!-- Armen -->
-        <path d="M16 32 Q32 38 48 32" stroke="white" />
-        <!-- Bal -->
-        <circle cx="52" cy="38" r="6" fill="#fff" stroke="#00796b" stroke-width="2"/>
-        <path d="M48 34 L56 42" stroke="#00796b" stroke-width="2"/>
-        <path d="M56 34 L48 42" stroke="#00796b" stroke-width="2"/>
-      </svg>
-    </div>
-    <h1>Help mij mijn waterpolodroom waarmaken</h1>
+    <h1>Lasse’s Waterpolo & Donaties</h1>
   </header>
 
-  <section class="section">
-    <h2>Over mij</h2>
-    <p>Hoi! Ik ben <strong>Lasse</strong>, 14 jaar oud en al 8 jaar fanatiek bezig met waterpolo. Ik train meer dan 7 keer per week en speel op het hoogste niveau: de Eredivisie, bij <strong>Het Ravijn</strong> in Nijverdal.</p>
-  </section>
+  <div class="container">
 
-  <section class="section">
-    <h2>Mijn route en reizen</h2>
-    <p>Naast trainingen en wedstrijden moet ik dagelijks reizen van <strong>Doetinchem</strong> naar <strong>Ede</strong>, en dan weer naar huis. Deze lange routes kosten veel tijd én geld.</p>
-  </section>
+    <section class="block" data-label="Over Mij">
+      <h2>Over Mij</h2>
+      <p>Ik ben Lasse, 14 jaar en speel al 8 jaar waterpolo. Ik zit in de Eredivisie bij Het Ravijn in Nijverdal en train meer dan 7 keer per week.  
+      Ik reis veel: van school in Doetinchem naar Ede en daarna weer naar huis. Deze lange reizen kosten veel tijd en geld.</p>
+    </section>
 
-  <section class="section">
-    <h2>Waarom ik jouw steun nodig heb</h2>
-    <p>Mijn passie voor waterpolo vraagt veel inzet en reistijd. Daarom vraag ik hulp om mijn reiskosten te dekken. Met jouw steun kan ik blijven trainen, reizen en mijn droom najagen in de top van het Nederlandse waterpolo.</p>
-  </section>
+    <section class="block" data-label="Doneer">
+      <h2>Help mij met reiskosten</h2>
+      <p>Wil je mij steunen zodat ik kan blijven reizen voor mijn sport? Elke donatie, groot of klein, helpt enorm!  
+      Ben je jonger dan 18? Vraag dan eerst toestemming aan je ouders of voogd.</p>
+      <a href="https://www.doneeractie.nl/help-lasse-met-zijn-waterpolodroom/-109027" target="_blank" rel="noopener noreferrer" class="btn">Doneer via deze link</a>
+    </section>
 
-  <section class="section">
-    <h2>Steun mij</h2>
-    <p>Elke bijdrage helpt! Wil jij me helpen mijn sport te blijven doen?</p>
+    <section class="block" data-label="Wedstrijden">
+      <h2>Wedstrijdprogramma</h2>
+      <p>Bekijk hier het programma van mijn waterpolo-team in de Eredivisie bij Het Ravijn.</p>
+      <a href="wedstrijden.html" class="btn">Bekijk het wedstrijdprogramma</a>
+    </section>
 
-    <div class="donate">
-      <a href="https://www.doneeractie.nl/help-lasse-met-zijn-waterpolodroom/-109027">
-        Doneer nu
-      </a>
-      <p class="note">Ben je jonger dan 18? Vraag dan eerst toestemming aan je ouders of voogd.</p>
-    </div>
-
-    <!-- Link naar de wedstrijden pagina -->
-    <div style="text-align:center; margin-top: 40px;">
-      <a href="wedstrijden.html" class="donate-button">Bekijk het wedstrijdprogramma</a>
-    </div>
-  </section>
+  </div>
 
   <footer>
     &copy; 2025 Lasse | Waterpolo Het Ravijn Nijverdal
   </footer>
-
 </body>
 </html>
